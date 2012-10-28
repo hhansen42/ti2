@@ -1,0 +1,60 @@
+\documentclass{ti2}
+
+% Dateikodierung ist latin1
+\usepackage[latin1]{inputenc}   
+
+\begin{document}
+
+% Nr, Abgabedatum, Gruppenleiter, Gruppenname, Name1...Name4
+\Abgabeblatt{1}{xx.xx.2012}{Tutor}{Gruppenname}%
+                {Teilnehmer 1}{Teilnehmer 2}%
+                {Teilnehmer 3}{Teilnehmer 4}%
+
+\section*{Aufgabe 1}
+Zuerst der Quellcode zu unserer Lösung für Aufgabe 1. Es ist ganz
+toller Quellcode. So ganz richtig toll. Extra-prima, um genau zu sein.
+
+% Diese Umgebung zeigt Source-Code mit Zeilennummern an
+% \begin{listing}{Nummer der ersten Zeile}
+\begin{listing}{1}
+#include <iostream.h>
+
+const int zeilen=6;
+
+int main() {
+    int n=zeilen;
+    while (n>=0){
+        int i=0;
+        while (i<n){
+            cout << " ";
+            i=i+1;
+        }
+\end{listing}
+Nach ein paar Bemerkungen geht der Quellcode hier weiter. Denn er ist
+immer noch extra-prima und wir wollen nichts davon auslassen.
+% Im Unterschied zu der listing-Umgebung wird hier die
+% Numerierung einer vorherigen listing-Umgebung fortgesetzt.
+\begin{listingcont}
+        i=0;
+        while (i<=(zeilen-n)*2){
+            cout << "*";
+            i=i+1;
+        }
+
+        cout << endl;
+        n=n-1;
+    }
+
+    return 0;
+}
+\end{listingcont}
+
+%%
+
+\section*{Aufgabe 2}
+
+Bla foo bar fasel. Fnunk. Bla foo bar fasel. Tüdelüt. Bla foo bar
+fasel. Hallo. Bla foo bar fasel. Fnunk. Bla foo bar fasel. Fnunk. Bla
+foo bar fasel. Fnunk. Bla foo bar fasel.
+
+\end{document}
