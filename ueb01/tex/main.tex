@@ -1,60 +1,32 @@
 \documentclass{ti2}
 
-% Dateikodierung ist latin1
-\usepackage[latin1]{inputenc}   
+% Dateikodierung ist utf8
+\usepackage[utf8]{inputenc} 
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
 
 \begin{document}
 
 % Nr, Abgabedatum, Gruppenleiter, Gruppenname, Name1...Name4
-\Abgabeblatt{1}{xx.xx.2012}{Tutor}{Gruppenname}%
-                {Teilnehmer 1}{Teilnehmer 2}%
-                {Teilnehmer 3}{Teilnehmer 4}%
+\Abgabeblatt{1}{31.10.2012}{}{}%
+                {Hauke Hansen}{Lukas Heinrich}%
+                {Florian Kraemer}{}%
 
 \section*{Aufgabe 1}
-Zuerst der Quellcode zu unserer L�sung f�r Aufgabe 1. Es ist ganz
-toller Quellcode. So ganz richtig toll. Extra-prima, um genau zu sein.
-
 % Diese Umgebung zeigt Source-Code mit Zeilennummern an
 % \begin{listing}{Nummer der ersten Zeile}
 \begin{listing}{1}
-#include <iostream.h>
-
-const int zeilen=6;
-
-int main() {
-    int n=zeilen;
-    while (n>=0){
-        int i=0;
-        while (i<n){
-            cout << " ";
-            i=i+1;
-        }
 \end{listing}
-Nach ein paar Bemerkungen geht der Quellcode hier weiter. Denn er ist
-immer noch extra-prima und wir wollen nichts davon auslassen.
-% Im Unterschied zu der listing-Umgebung wird hier die
-% Numerierung einer vorherigen listing-Umgebung fortgesetzt.
 \begin{listingcont}
-        i=0;
-        while (i<=(zeilen-n)*2){
-            cout << "*";
-            i=i+1;
-        }
 
-        cout << endl;
-        n=n-1;
-    }
-
-    return 0;
-}
 \end{listingcont}
 
-%%
+\section*{Aufgabe 3}
 
 \section*{Aufgabe 2}
+\subsection*{1.}
+Die öffentliche Zugänglichkeit der public-keys stellt kein Sicherheitsproblem dar, da SSH auf einem asymmetrischen Verschlüsselungsverfahren beruht. Das zugrundeliegende Prinzip beruht dann auf mathematischen Einwegfunktionen, sprich Funktionen die (mittels public-key) einfach zu berechnen sind. Das Ergebnis aber dann zu invertieren, sprich zu entschlüsseln, ist ohne Kenntnis des private-keys unmöglich. Letzteres ist allerdings eine angenommene unbewiesene Bahauptung für einen endlichen Zeitraum.\footnote{\url{http://de.wikipedia.org/wiki/Einwegfunktion}}\footnote{\url{http://de.wikipedia.org/wiki/Asymmetrisches_Kryptosystem}}
 
-Bla foo bar fasel. Fnunk. Bla foo bar fasel. T�del�t. Bla foo bar
-fasel. Hallo. Bla foo bar fasel. Fnunk. Bla foo bar fasel. Fnunk. Bla
-foo bar fasel. Fnunk. Bla foo bar fasel.
 
+\subsection*{2.}
+Das Senden eines Passwortes über einen ungesicherten Kanal könnte leicht abgehört werden, und würde einen Angreifer direkt in Besitz unverschlüsselter Zugangsdaten bringen.
 \end{document}
